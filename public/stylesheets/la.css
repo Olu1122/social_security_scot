@@ -8544,3 +8544,15 @@ x:-moz-any-link {
     margin-bottom: 0;
   }
 }
+
+.govuk-header {
+  border-bottom: 0px;
+}
+
+.govuk-footer {
+  font-size: 10px;
+  background-color: #0065bd;
+}
+.govuk-footer p, .govuk-footer .govuk-footer__link:link, .govuk-footer .govuk-footer__link:visited, .govuk-footer .govuk-footer__link:hover, .govuk-footer .govuk-footer__link:active {
+  color: white;
+}
