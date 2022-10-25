@@ -1,133 +1,42 @@
-{% extends "layout.html" %}
+{% extends "layout_la.html" %}
 
 {% block pageTitle %}
-GOV.UK Prototype Kit
-{% endblock %}
-
-{% block header %}
-<!-- Blank header with no service name for the start page -->
-
-{% endblock %}
-
-
-{% block beforeContent %}
-
-{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
-{{ govukPhaseBanner({
-    tag: {
-      text: "beta"
-    },
-    html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
-  }) }}
-  <a class="govuk-back-link" href="javascript:history.back()">Back</a>
+  Social Security Scotland
 {% endblock %}
 
 {% block content %}
+
+
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
-
-<table class="govuk-table">
-  <thead class="govuk-table__head">
-    <tr class="govuk-table__row">
-  <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Version</th>
-  <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Activities</th>
-  <th scope="col" class="govuk-table__header govuk-!-width-one-half">Link</th>
-
-    </tr>
-  </thead>
-      <tbody class="govuk-table__body">
-        <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header">Sprint 4</th>
-          <td class="govuk-table__cell">
-            <p>Here we're investigating different navigation options, email communications and a different structure to the project overview</p>
-              <p> <a href="https://pins-ds.atlassian.net/browse/APS-378" target="_blank">APS 378</a> (Document library)</p>
-                <p> <a href="https://pins-ds.atlassian.net/browse/APS-481" target="_blank">APS 481</a> (Ability to enter comments)</p>
-                <p> <a href="https://pins-ds.atlassian.net/browse/APS-477" target="_blank">APS 477</a> (Ability to submit contact details)</p>
-                <p> <strong>User Research activities: </strong></p>
-                <p> Testing with 6-8 IP professional</p>
-                <ul class="govuk-list govuk-list--bullet">
-
-                  <li>Overview in pre application stage </li>
-                  <li>Email: Register to have your say </li>
-                  <li>Overview in pre-examination stage </li>
-                  <li>Register to have your say</li>
-                  <li>Email: Examination timeline </li>
-                  <li>Overview in examination stage </li>
-                  <li>Examination timetable </li>
-                </ul>
-  <p><a href="https://miro.com/app/board/o9J_lvgGFKg=/?moveToWidget=3074457367802471212&cot=14" target="_blank"> User Research note taking template sprint 4</a> </p>
-          </td>
-          <td class="govuk-table__cell">
-            <ul class="govuk-list govuk-list--number">
-              <li>Overview in pre application stage (<a href="../sprint-4/breadcrumbs/">breadcrumbs</a>) or (<a href="../sprint-4/vertical-tabs/">vertical tabs</a>)</li>
-              <li>Email: Register to have your say (<a href="../sprint-4/breadcrumbs/registration-email">breadcrumbs</a>) or (<a href="../sprint-4/vertical-tabs/registration-email">vertical tabs</a>)</li>
-              <li>Overview in pre-examination stage (<a href="../sprint-4/breadcrumbs/pre-examination">breadcrumbs</a>) or (<a href="../sprint-4/vertical-tabs/pre-examination/">vertical tabs</a>)</li>
-              <li><a href="../sprint-4/register/start">Register to have your say</a></li>
-              <li>Email: Examination timeline (<a href="../sprint-4/breadcrumbs/examination-started-email">breadcrumbs</a>) or (<a href="../sprint-4/vertical-tabs/examination-started-email">vertical tabs</a>)</li>
-              <li>Overview in examination stage  (<a href="../sprint-4/breadcrumbs/examination">breadcrumbs</a>) or (<a href="../sprint-4/vertical-tabs/examination/">vertical tabs</a>)</li>
-              <li>Examination timetable (<a href="../sprint-4/breadcrumbs/timetable">breadcrumbs</a>) or (<a href="../sprint-4/vertical-tabs/examination/timetable">vertical tabs</a>)</li>
-            </ul>
-          </td>
-        </tr>
-        <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header">Sprint 3</th>
-          <td class="govuk-table__cell">
-            <p> <strong>User Research activities: </strong></p>
-            <p> Testing with 7 non professional IPs </p>
-            <ul class="govuk-list govuk-list--bullet">
-
-              <li>Overview page</li>
-              <li>Step by step guides </li>
-              <li>Doc library </li>
-              <li>IP registration form - individuals and organisations</li>
-            </ul>
-<p><a href="https://miro.com/app/board/o9J_lvgGFKg=/?moveToWidget=3074457367049951922&cot=14" target="_blank"> User Research note taking template sprint 3</a> </p>
-          </td>
-          <td class="govuk-table__cell">
-            <ul class="govuk-list govuk-list--number">
-              <li><a href="overview.html">Overview page</a></li>
-              <li><a href="document-library.html">Document library</a></li>
-              <li><a href="interested-party-guide/index.html">Interested party guide</a></li>
-              <li><a href="dco-process-guide/index.html">The Development Consent Order (DCO) process guide</a></li>
-            </ul>
-          </td>
-        </tr>
-        <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header">Sprint 2</th>
-          <td class="govuk-table__cell">
-            <p>Earlier versions of the overview pages</p>
-<p><a href="https://miro.com/app/board/o9J_lvgGFKg=/?moveToWidget=3074457366567542749&cot=14" target="_blank"> User Research note taking template sprint 2</a> </p>
-          </td>
-          <td class="govuk-table__cell">
-            <ul class="govuk-list govuk-list--number">
-              <li><a href="../overview-pages/overview-1-pre-application">Pre-application overview page</a></li>
-              <li><a href="../overview-pages/overview-2-review">Review of the application overview page</a></li>
-              <li><a href="../overview-pages/overview-3-pre-examination">Pre-examination overview page</a></li>
-              <li><a href="../overview-pages/overview-4-examination">Examination overview page</a></li>
-              <li><a href="../overview-pages/overview-5-recommendation">Recommendation and decision overview page</a></li>
-              <li><a href="../overview-pages/overview-6-post-decision">Post decision overview page</a></li>
-            </ul>
-          </td>
-        </tr>
-
-      </tbody>
-    </table>
-
-    <p> <strong>Useful links </strong></p>
-    <ul class="govuk-list govuk-list--number">
-
-      <li> <a href="https://miro.com/app/board/o9J_lma9GqE=/?moveToWidget=3074457367987930813&cot=14" target="_blank"> Design backlog </a> </li>
-      <li> <a href="https://pins-ds.atlassian.net/wiki/spaces/AD/pages/893124751/PB-+Sprint+2-+Research+schedule+notes+and+recordings+links" target="_blank"> User Research Schedule Sprint 2</a> </li>
-      <li> <a href="https://pins-ds.atlassian.net/wiki/spaces/AD/pages/902398027/PB-+Sprint+3-+Research+schedule+notes+and+recordings+links" target="_blank"> User Research Schedule Sprint 3</a> </li>
-    <li> <a href="https://pins-ds.atlassian.net/wiki/spaces/AD/pages/906920015/PB-+Sprint+4-+Research+schedule+notes+and+recordings+links" target="_blank"> User Research Schedule Sprint 4 </a> </li>
-    </ul>
+    <h1> This is a test page</h1>
 
     </div>
 </div>
 
 {% endblock %}
 
-
 {% block footer %}
+<footer class="govuk-footer" role="contentinfo">
+  <div class="govuk-width-container">
+<p>  <u> Assessibility</u> &emsp; &emsp; <u>Contact us</u> &emsp; &emsp; <u>Privacy </u> &emsp; &emsp; <u>Social Security Corporate site</u> </p>
 
+<hr class="govuk-footer__section-break">
+
+<div class="govuk-footer__meta">
+  <div class="govuk-footer__meta-item govuk-footer__meta-item--grow">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+      <p>mygov.scot is the place for people in Scotland to access
+        public services that are easy to find and simple to use</p>
+    </div>
+    <div class="govuk-grid-column-one-quarter-from-desktop">
+      <p><a href="/index.html" id="logo-ssg1"><image src="{{ asset_path }}images/ssg2.png" alt="ssg2 logo" width="200" height="80"></image></a></p>
+    </div>
+  </div>
+
+</div>
+    </div>
+  </div>
+</footer>
 {% endblock %}
